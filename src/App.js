@@ -1,10 +1,13 @@
 import React from 'react';
 import Calculator from './components/Calculator';
+import NumberProvider from './components/NumberProvider';
 
 const App = () => {
 	return (
 		<div>
-			<Calculator />
+			<NumberProvider>
+				<Calculator />
+			</NumberProvider>
 		</div>
 	);
 };
