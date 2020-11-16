@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { NumberContext } from './NumberProvider';
 
 const NumberButton = ({ buttonValue }) => {
-	return <button className='button'>{buttonValue}</button>;
+	const { handleSetDisplayValue } = useContext(NumberContext);
+
+	return (
+		<button className='button' onClick={() => handleSetDisplayValue(buttonValue)}>
+			{buttonValue}
+		</button>
+	);
 };
 
 export default NumberButton;
