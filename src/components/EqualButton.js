@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { NumberContext } from './NumberProvider';
 
 const EqualButton = () => {
-	return <button>=</button>;
+	const { handleEqualButton } = useContext(NumberContext);
+	return <button onClick={() => handleEqualButton()}>=</button>;
 };
 
 export default EqualButton;

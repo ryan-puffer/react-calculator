@@ -4,6 +4,8 @@ export const NumberContext = React.createContext();
 
 const NumberProvider = (props) => {
 	const [number, setNumber] = useState('0');
+	const [functionValue, setFunctionValue] = useState('');
+	const [storedNumber, setStoredNumber] = useState('');
 
 	const handleSetDisplayValue = (num) => {
 		if (!number.includes('.') || num !== '.') {
@@ -11,13 +13,35 @@ const NumberProvider = (props) => {
 		}
 	};
 
+	const setStoredValue = () => {
+		setStoredNumber(number);
+		setNumber('');
+	};
+
 	const handleClearValue = () => {
 		setNumber('');
 	};
 
+	const handleFunctionButton = (buttonValue) => {
+		setStoredValue();
+		setFunctionValue(buttonValue);
+	};
+
+	const handleEqualButton = () => {
+		if (functionValue === '+') {
+			setNumber(`${parseFloat(number) + parseFloat(storedNumber)}`);
+		}
+	};
+
 	return (
 		<NumberContext.Provider
-			value={{ handleSetDisplayValue, handleClearValue, number }}>
+			value={{
+				handleSetDisplayValue,
+				handleClearValue,
+				handleFunctionButton,
+				handleEqualButton,
+				number,
+			}}>
 			{props.children}
 		</NumberContext.Provider>
 	);
