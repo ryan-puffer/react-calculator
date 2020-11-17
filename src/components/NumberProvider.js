@@ -18,8 +18,14 @@ const NumberProvider = (props) => {
 		setNumber('');
 	};
 
+	const handleBackButton = () => {
+		setNumber(number.slice(0, -1));
+	};
+
 	const handleClearValue = () => {
 		setNumber('0');
+		setStoredNumber('');
+		setFunctionValue('');
 	};
 
 	const handleFunctionButton = (buttonValue) => {
@@ -37,6 +43,7 @@ const NumberProvider = (props) => {
 		} else if (functionValue === '/') {
 			setNumber(`${parseFloat(storedNumber) / parseFloat(number)}`);
 		}
+		setStoredNumber(number);
 	};
 
 	const handleNegativeButton = () => {
@@ -53,6 +60,9 @@ const NumberProvider = (props) => {
 				handleFunctionButton,
 				handleEqualButton,
 				handleNegativeButton,
+				storedNumber,
+				handleBackButton,
+				functionValue,
 				number,
 			}}>
 			{props.children}
