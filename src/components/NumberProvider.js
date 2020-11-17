@@ -10,8 +10,14 @@ const NumberProvider = (props) => {
 			setNumber(`${(number + num).replace(/^0+/, '')}`);
 		}
 	};
+
+	const handleClearValue = () => {
+		setNumber('');
+	};
+
 	return (
-		<NumberContext.Provider value={{ handleSetDisplayValue, number }}>
+		<NumberContext.Provider
+			value={{ handleSetDisplayValue, handleClearValue, number }}>
 			{props.children}
 		</NumberContext.Provider>
 	);

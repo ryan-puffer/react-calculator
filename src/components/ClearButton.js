@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { NumberContext } from './NumberProvider';
 
 const ClearButton = () => {
-	return <button className='button'>AC</button>;
+	const { handleClearValue } = useContext(NumberContext);
+
+	return (
+		<button
+			className='button'
+			onClick={() => {
+				handleClearValue();
+			}}>
+			AC
+		</button>
+	);
 };
 
 export default ClearButton;
