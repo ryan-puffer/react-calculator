@@ -21,7 +21,7 @@ const Calculator = () => (
 			<NumberButton buttonValue={7} />
 			<NumberButton buttonValue={8} />
 			<NumberButton buttonValue={9} />
-			<FunctionButton buttonValue='*' />
+			<FunctionButton buttonValue='X' />
 			<NumberButton buttonValue={4} />
 			<NumberButton buttonValue={5} />
 			<NumberButton buttonValue={6} />

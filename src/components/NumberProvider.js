@@ -19,7 +19,7 @@ const NumberProvider = (props) => {
 	};
 
 	const handleClearValue = () => {
-		setNumber('');
+		setNumber('0');
 	};
 
 	const handleFunctionButton = (buttonValue) => {
@@ -30,6 +30,18 @@ const NumberProvider = (props) => {
 	const handleEqualButton = () => {
 		if (functionValue === '+') {
 			setNumber(`${parseFloat(number) + parseFloat(storedNumber)}`);
+		} else if (functionValue === '-') {
+			setNumber(`${parseFloat(storedNumber) - parseFloat(number)}`);
+		} else if (functionValue === 'X') {
+			setNumber(`${parseFloat(storedNumber) * parseFloat(number)}`);
+		} else if (functionValue === '/') {
+			setNumber(`${parseFloat(storedNumber) / parseFloat(number)}`);
+		}
+	};
+
+	const handleNegativeButton = () => {
+		if (number) {
+			setNumber(number * -1);
 		}
 	};
 
@@ -40,6 +52,7 @@ const NumberProvider = (props) => {
 				handleClearValue,
 				handleFunctionButton,
 				handleEqualButton,
+				handleNegativeButton,
 				number,
 			}}>
 			{props.children}

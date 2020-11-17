@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { NumberContext } from './NumberProvider';
 
 const NegativeButton = () => {
-	return <button className='button'>-/+</button>;
+	const { handleNegativeButton } = useContext(NumberContext);
+	return (
+		<button
+			className='button'
+			onClick={() => {
+				handleNegativeButton();
+			}}>
+			-/+
+		</button>
+	);
 };
 
 export default NegativeButton;
