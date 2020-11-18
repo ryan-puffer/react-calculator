@@ -34,16 +34,17 @@ const NumberProvider = (props) => {
 		//when operation is clicked, set stored number from display
 		setStoredValue();
 		setFunctionValue(buttonValue);
+		setNumber('');
 	};
 
 	const handleEqualButton = () => {
 		if (functionValue === '+') {
 			setNumber(`${parseFloat(number) + parseFloat(storedNumber)}`);
-		} else if (functionValue === '-') {
+		} else if (functionValue === '−') {
 			setNumber(`${parseFloat(storedNumber) - parseFloat(number)}`);
-		} else if (functionValue === 'X') {
+		} else if (functionValue === '×') {
 			setNumber(`${parseFloat(storedNumber) * parseFloat(number)}`);
-		} else if (functionValue === '/') {
+		} else if (functionValue === '÷') {
 			setNumber(`${parseFloat(storedNumber) / parseFloat(number)}`);
 		}
 		setStoredValue();

@@ -9,7 +9,7 @@ const NegativeButton = () => {
 			onClick={() => {
 				handleNegativeButton();
 			}}>
-			-/+
+			±
 		</button>
 	);
 };

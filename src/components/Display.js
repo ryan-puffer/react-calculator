@@ -3,14 +3,10 @@ import { NumberContext } from './NumberProvider';
 import { DisplayStyles } from './styles/Styles';
 
 const Display = () => {
-	const { number, functionValue, storedNumber } = useContext(NumberContext);
+	const { number } = useContext(NumberContext);
 	return (
 		<DisplayStyles>
-			<h2>{number}</h2>
-			<p>
-				{storedNumber}
-				{functionValue}
-			</p>
+			<div className='screen'>{number}</div>
 		</DisplayStyles>
 	);
 };
