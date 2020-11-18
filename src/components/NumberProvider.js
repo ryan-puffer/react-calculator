@@ -3,23 +3,25 @@ import React, { useState } from 'react';
 export const NumberContext = React.createContext();
 
 const NumberProvider = (props) => {
+	//initialize state across entire app
 	const [number, setNumber] = useState('0');
 	const [functionValue, setFunctionValue] = useState('');
 	const [storedNumber, setStoredNumber] = useState('');
 
+	//no more than one decimal or not only a decimal
 	const handleSetDisplayValue = (num) => {
 		if (!number.includes('.') || num !== '.') {
+			//concat digit pressed onto number, replace initial 0 w/ empty string
 			setNumber(`${(number + num).replace(/^0+/, '')}`);
 		}
 	};
 
 	const setStoredValue = () => {
 		setStoredNumber(number);
-		setNumber('');
 	};
 
-	const handleBackButton = () => {
-		setNumber(number.slice(0, -1));
+	const handlePercentButton = () => {
+		setNumber(number / 100);
 	};
 
 	const handleClearValue = () => {
@@ -29,6 +31,7 @@ const NumberProvider = (props) => {
 	};
 
 	const handleFunctionButton = (buttonValue) => {
+		//when operation is clicked, set stored number from display
 		setStoredValue();
 		setFunctionValue(buttonValue);
 	};
@@ -43,7 +46,7 @@ const NumberProvider = (props) => {
 		} else if (functionValue === '/') {
 			setNumber(`${parseFloat(storedNumber) / parseFloat(number)}`);
 		}
-		setStoredNumber(number);
+		setStoredValue();
 	};
 
 	const handleNegativeButton = () => {
@@ -61,7 +64,7 @@ const NumberProvider = (props) => {
 				handleEqualButton,
 				handleNegativeButton,
 				storedNumber,
-				handleBackButton,
+				handlePercentButton,
 				functionValue,
 				number,
 			}}>

@@ -8,8 +8,8 @@ const Display = () => {
 		<DisplayStyles>
 			<h2>{number}</h2>
 			<p>
-				{functionValue}
 				{storedNumber}
+				{functionValue}
 			</p>
 		</DisplayStyles>
 	);

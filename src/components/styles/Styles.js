@@ -22,6 +22,7 @@ export const CalculatorStyles = styled.div`
 			outline: none;
 		}
 	}
+
 	.display {
 		font-family: 'Orbitron', serif;
 		font-weight: 700;
@@ -46,6 +47,9 @@ export const CalculatorStyles = styled.div`
 	}
 	.zero-button {
 		grid-column: 1/3;
+	}
+	button.function-button {
+		background: #222;
 	}
 `;
 

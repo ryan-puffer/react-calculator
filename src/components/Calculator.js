@@ -4,7 +4,7 @@ import FunctionButton from './FunctionButton';
 import ClearButton from './ClearButton';
 import Display from './Display';
 import EqualButton from './EqualButton';
-import BackButton from './BackButton';
+import PercentButton from './PercentButton';
 import NegativeButton from './NegativeButton';
 import { CalculatorStyles } from './styles/Styles';
 
@@ -15,8 +15,8 @@ const Calculator = () => (
 		</div>
 		<div className='number-pad'>
 			<ClearButton />
-			<BackButton />
 			<NegativeButton />
+			<PercentButton />
 			<FunctionButton buttonValue='/' />
 			<NumberButton buttonValue={7} />
 			<NumberButton buttonValue={8} />

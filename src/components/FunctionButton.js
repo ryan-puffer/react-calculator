@@ -9,7 +9,8 @@ const FunctionButton = ({ buttonValue }) => {
 			onClick={() => {
 				handleFunctionButton(buttonValue);
 			}}
-			value={buttonValue}>
+			value={buttonValue}
+			className='function-button'>
 			{buttonValue}
 		</button>
 	);
