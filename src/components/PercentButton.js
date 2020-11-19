@@ -3,7 +3,11 @@ import { NumberContext } from './NumberProvider';
 
 const PercentButton = () => {
 	const { handlePercentButton } = useContext(NumberContext);
-	return <button onClick={() => handlePercentButton()}>%</button>;
+	return (
+		<button className='button top-button' onClick={() => handlePercentButton()}>
+			%
+		</button>
+	);
 };
 
 export default PercentButton;

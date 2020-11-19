@@ -5,7 +5,7 @@ const NegativeButton = () => {
 	const { handleNegativeButton } = useContext(NumberContext);
 	return (
 		<button
-			className='button'
+			className='button top-button'
 			onClick={() => {
 				handleNegativeButton();
 			}}>

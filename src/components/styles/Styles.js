@@ -9,7 +9,7 @@ export const CalculatorStyles = styled.div`
 
 	background-color: #000;
 	width: 100%;
-	height: 100vh;
+	height: 600px;
 	display: grid;
 	justify-items: center;
 	border-radius: 25px;
@@ -22,9 +22,10 @@ export const CalculatorStyles = styled.div`
 		height: 100%;
 		border-radius: 50%;
 		font-size: 2rem;
+		border: none;
 		color: white;
 		font-family: 'helvetica', sans-serif;
-		background: #aaa;
+		background: #333;
 		&:focus {
 			outline: none;
 		}
@@ -55,6 +56,16 @@ export const CalculatorStyles = styled.div`
 	.zero-button {
 		grid-column: 1/3;
 		border-radius: 50px !important;
+	}
+
+	.function-button {
+		background: #f1a33c;
+		color: white;
+	}
+
+	.top-button {
+		background: #a5a5a5;
+		color: black;
 	}
 `;
 
