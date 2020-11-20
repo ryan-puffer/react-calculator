@@ -11,8 +11,10 @@ const NumberProvider = (props) => {
 	//no more than one decimal or not only a decimal
 	const handleSetDisplayValue = (num) => {
 		if (!number.includes('.') || num !== '.') {
-			//concat digit pressed onto number, replace initial 0 w/ empty string
-			setNumber(`${(number + num).replace(/^0+/, '')}`);
+			if (number < 1000000) {
+				//concat digit pressed onto number, replace initial 0 w/ empty string
+				setNumber(`${(number + num).replace(/^0+/, '')}`);
+			}
 		}
 	};
 

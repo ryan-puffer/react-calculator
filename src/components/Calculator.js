@@ -7,10 +7,12 @@ import EqualButton from './EqualButton';
 import PercentButton from './PercentButton';
 import NegativeButton from './NegativeButton';
 import ZeroButton from './ZeroButton';
+import Top from './Top';
 import { CalculatorStyles } from './styles/Styles';
 
 const Calculator = () => (
 	<CalculatorStyles>
+		<Top />
 		<div className='display'>
 			<Display />
 		</div>
