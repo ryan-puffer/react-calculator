@@ -4,9 +4,10 @@ import { DisplayStyles } from './styles/Styles';
 
 const Display = () => {
 	const { number } = useContext(NumberContext);
+
 	return (
 		<DisplayStyles>
-			<div className='screen'>{number}</div>
+			<div className={`screen ${number > 999999 ? 'large-num' : ''}`}>{number}</div>
 		</DisplayStyles>
 	);
 };

@@ -8,7 +8,7 @@ const Top = () => {
 		<div className='top'>
 			<div className='time'>{time}</div>
 			<div className='right-corner'>
-				<div className='menu'>
+				<div>
 					<img className='menu' src={menu} />
 				</div>
 			</div>

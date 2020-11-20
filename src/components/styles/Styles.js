@@ -46,6 +46,7 @@ export const CalculatorStyles = styled.div`
 		width: 100%;
 		grid-area: display;
 	}
+
 	.number-pad {
 		grid-area: numbers;
 		display: grid;
@@ -97,6 +98,10 @@ export const CalculatorStyles = styled.div`
 		position: absolute;
 		bottom: 4px;
 	}
+
+	.menu {
+		height: 15px;
+	}
 `;
 
 export const DisplayStyles = styled.div`
@@ -111,5 +116,8 @@ export const DisplayStyles = styled.div`
 	.screen {
 		margin: 0;
 		text-align: right;
+	}
+	.large-num {
+		font-size: 3rem;
 	}
 `;

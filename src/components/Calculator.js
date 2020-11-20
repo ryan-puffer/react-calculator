@@ -13,7 +13,7 @@ import { CalculatorStyles } from './styles/Styles';
 const Calculator = () => (
 	<CalculatorStyles>
 		<Top />
-		<div className='display'>
+		<div className={`display`}>
 			<Display />
 		</div>
 		<div className='number-pad'>
