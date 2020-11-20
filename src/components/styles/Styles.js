@@ -81,9 +81,21 @@ export const CalculatorStyles = styled.div`
 
 	.top {
 		display: flex;
+		width: 100%;
+		height: 30px;
 		justify-content: space-between;
 		color: white;
+		padding: 5px 10px 0 10px;
 		font-size: 1rem;
+	}
+
+	.bottom {
+		height: 2px;
+		width: 50%;
+		border: 2px solid white;
+		border-radius: 25px;
+		position: absolute;
+		bottom: 4px;
 	}
 `;
 

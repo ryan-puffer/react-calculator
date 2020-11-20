@@ -39,6 +39,7 @@ const Calculator = () => (
 			<NumberButton buttonValue='.' />
 			<EqualButton />
 		</div>
+		<div className='bottom'></div>
 	</CalculatorStyles>
 );
 
